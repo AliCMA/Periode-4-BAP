@@ -1,5 +1,9 @@
-*{
-    margin: 0;
-    bottom: 0;
-    justify-content: center;
+.places-list{
+    display: flex;
+    gap: 12.5rem;
+}
+
+.places-list__photo{
+    background-size: cover;
+    height: 20rem;
 }
