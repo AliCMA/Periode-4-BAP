@@ -27,14 +27,14 @@ $result = $connection->query('SELECT * FROM `portfolio`');
 
     <?php foreach($result as $row): ?>
     <article class="places-list__place">
-        <h2><?php echo $row ['watvoordevikben'];  ?></h2>
+        <h2><?php echo $row ['pakket'];  ?></h2>
         <figure class="places-list__photo" style="background-image: url(images/<?php echo $row ['foto']; ?>)"></figure>
         <header>
             <h3>Prijs:</h3>
-            <em>25 EU</em>
+            <h2><?php echo $row ['prijs'];  ?></h2>
+            <h2><?php echo $row ['inhoud'];  ?></h2>
         </header>
-
-        <p>Je krijgt alle files meegestuurd als je de bundel aanschaft!</p>
+        <h2><?php echo $row ['beschrijving'];  ?></h2>
 
     </article>
     <?php endforeach; ?>

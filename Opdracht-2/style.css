@@ -1,9 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: coral;
+}
+
 .places-list{
     display: flex;
-    gap: 12.5rem;
+    gap: 5rem;
 }
 
 .places-list__photo{
     background-size: cover;
-    height: 20rem;
+    height: 15rem;
+    width: 30rem;
 }
