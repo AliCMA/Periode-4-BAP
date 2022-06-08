@@ -2,13 +2,16 @@
 require 'functions.php';
 $connection = dbConnect();
 
+
 $result = $connection->query('SELECT * FROM `portfolio`');
 
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
+
 
 <head>
     <meta charset="UTF-8">
@@ -17,6 +20,7 @@ $result = $connection->query('SELECT * FROM `portfolio`');
     <title>Website prices</title>
     <link rel="stylesheet" href="style.css">
 
+
 </head>
 <body>
     
@@ -24,6 +28,7 @@ $result = $connection->query('SELECT * FROM `portfolio`');
     <div class="container">
     <h1>Website bundels</h1>
     <section class="places-list">
+
 
     <?php foreach($result as $row): ?>
     <article class="places-list__place">
@@ -35,12 +40,30 @@ $result = $connection->query('SELECT * FROM `portfolio`');
             <h2><?php echo $row ['inhoud'];  ?></h2>
         </header>
         <h2><?php echo $row ['beschrijving'];  ?></h2>
-
+        <a href="details.php?id=<?php echo $row ['id'];?>"><b>Meer informatie</b></a>
     </article>
     <?php endforeach; ?>
+
 
     </section>
     </div>
 
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
