@@ -45,6 +45,9 @@ $result = $connection->query('SELECT * FROM `portfolio`');
     <?php endforeach; ?>
 
 
+   
+
+
     </section>
     </div>
 

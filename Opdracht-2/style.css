@@ -15,6 +15,33 @@
     box-sizing: border-box;
 }
 
+.h1-titel{
+    color: red;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.h2-titel{  
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.form__field{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.opsturenButton{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 60rem;
+    margin-top: 5rem;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -48,7 +75,14 @@ h5 {
     color: var(--superiority-blue);
     font-weight: var(--font-weight-normal);
     line-height: 1;
+    font-size: 3rem;
 }
+
+.labelnaam{
+    color: red;
+    font-size: 2rem;
+}
+
 
 h1 {
     font-family: 'Abril Fatface', cursive;
@@ -277,3 +311,4 @@ img {
         width: 80%;
     }
 }
+

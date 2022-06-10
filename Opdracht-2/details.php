@@ -20,7 +20,10 @@ $statement = $connection->prepare('SELECT * FROM `portfolio` WHERE id=?');
 $params = [$id];
 $statement->execute($params);
 $place =$statement->fetch(PDO::FETCH_ASSOC);
+$pakketen = $connection->query('SELECT * FROM `portfolio`');
 ?>
+ 
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,13 +39,13 @@ $place =$statement->fetch(PDO::FETCH_ASSOC);
     
 
 <div class="container place-details">
-        <h1>The best travel spots to visit!</h1>
+        <h1>Website pakket!</h1>
         <section>
             <article class="place-info">
                 <header class="headertype">
                     <h2><?php echo $place['pakket']?></h2>
                     <h3><?php echo $place['inhoud']?></h3>
-                </header>
+                </header> 
                 <figure style="background-image: url(images/<?php echo $place['foto']?>)">
                     <em>€<?php echo $place['prijs']?></em>
                 </figure>
@@ -50,19 +53,24 @@ $place =$statement->fetch(PDO::FETCH_ASSOC);
                 <?php echo $place['beschrijving']?>
                 </p>
                 <hr>
+                <a href="contact.php" class="link-button">Neem contacto op!</a>
+                <hr>
                 <a href="index.php">Terug naar het overzicht</a>
             </article>
             <aside class="places-sidebar">
                 <h3>Andere bundels</h3>
                 <ul>
-                    <li>Pakket 1</li>
-                    <li>Pakket 2</li>
-                    <li>Pakket 3</li>
-                    <li>Pakket 4</li>
+                <?php foreach($pakketen as $row): ?>
+                    <li><a href="details.php?id=<?php echo $row ['id'];?>"><?php echo $row ['pakket'];?></a></li> 
+                    <?php endforeach; ?>
                 </ul>
+                
+   
             </aside>
         </section>
-        
     </div>
 </body>
 </html>
+
+
+
