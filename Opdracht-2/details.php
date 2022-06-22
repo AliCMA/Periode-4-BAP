@@ -53,7 +53,7 @@ $pakketen = $connection->query('SELECT * FROM `portfolio`');
                 <?php echo $place['beschrijving']?>
                 </p>
                 <hr>
-                <a href="contact.php" class="link-button">Neem contacto op!</a>
+                <a href="contact.php" class="link-button">Neem contact op!</a>
                 <hr>
                 <a href="index.php">Terug naar het overzicht</a>
             </article>
