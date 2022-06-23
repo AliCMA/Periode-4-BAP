@@ -99,8 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 <button class="opsturenButton" type="submit" class="form_button">Opsturen</button>
             </form>
-
-        </section>
+    </section>
 
 
     </div>
